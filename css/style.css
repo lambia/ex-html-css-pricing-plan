@@ -79,7 +79,7 @@ header p {
 .pricing-card {
 	flex-grow: 1;
 	flex-shrink: 0;
-	flex-basis: calc(100% / 3 - 64px / 3);
+	width: calc(100% / 3 - 64px / 3);
 	min-width: 350px;
 	border-radius: 24px;
 	padding: 48px;
