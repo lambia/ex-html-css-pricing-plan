@@ -162,6 +162,14 @@ h2 {
 	margin-bottom: 16px;
 }
 
+.icon-dark {
+	filter: brightness(0);
+}
+
+.icon-light {
+	filter: brightness(400%);
+}
+
 .features-list i.bi {
 	/* valido solo per icone bootstrap (v. altro file) */
 	font-size: 32px;
