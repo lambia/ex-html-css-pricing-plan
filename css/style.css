@@ -1,0 +1,225 @@
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Generics */
+body {
+	font-family: sans-serif;
+}
+
+main {
+	padding: 32px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+header {
+	padding: 32px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+header p {
+	color: #808080;
+	margin-bottom: 24px;
+}
+
+.period-selection {
+	/* grow serve a prendere tutta la riga quando andiamo daccapo su mobile, prova a disattivarlo per vedere la differenza */
+	flex-grow: 1;
+	display: flex;
+	gap: 16px;
+	font-size: 16px;
+	justify-content: flex-end;
+	align-items: flex-start;
+	color: #808080;
+}
+
+.period-selection i {
+	font-size: 32px;
+}
+
+.period-selection i.bi-toggle-on {
+	/* valido solo per icone bootstrap (v. altro file) */
+	color: #000;
+}
+
+.period-selection>* {
+	gap: 8px;
+	display: flex;
+	align-items: center;
+}
+
+/* Utils */
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.row {
+	gap: 32px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/*  Cards */
+
+.pricing-card {
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: calc(100% / 3 - 64px / 3);
+	min-width: 350px;
+	border-radius: 24px;
+	padding: 48px;
+	/* Box shadow leggero per le card */
+	box-shadow: 0 8px 16px 0 #dedede;
+}
+
+.card-header {
+	margin-bottom: 24px;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+.pricing-card .subtitle {
+	color: #808080;
+}
+
+.price {
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+.price .currency {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.price .amount {
+	font-size: 64px;
+	font-weight: bolder;
+}
+
+.price .period {
+	color: #808080;
+}
+
+/*  Comparison */
+
+.comparison {
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+.comparison .discount {
+	padding: 8px;
+	border-radius: 8px;
+	display: inline-flex;
+	background-color: #e3e3e3;
+}
+
+/* Buttons */
+
+.btn {
+	font-size: 18px;
+	outline: none;
+	border: none;
+	padding: 24px;
+	border-radius: 16px;
+	display: block;
+	width: 100%;
+	margin-bottom: 24px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #6500ff;
+}
+
+/* Lista Prodotti */
+.features-list {
+	font-size: 18px;
+}
+
+.features-list li {
+	display: flex;
+	gap: 18px;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.features-list i.bi {
+	/* valido solo per icone bootstrap (v. altro file) */
+	font-size: 32px;
+}
+
+/* Evidenza */
+
+.highlight.pricing-card {
+	color: #fff;
+	background-color: #6500ff;
+}
+
+.highlight .period,
+.highlight .subtitle {
+	color: #fff;
+}
+
+.highlight .discount {
+	color: #000;
+}
+
+.highlight .btn {
+	color: #6500ff;
+	background-color: #fff;
+}
+
+/* CHICCA: Evidenza versione nesting */
+
+.highlight {
+	&.pricing-card {
+		color: #fff;
+		background-color: #6500ff;
+	}
+
+	.period,
+	.subtitle {
+		color: #fff;
+	}
+
+	.discount {
+		color: #000;
+	}
+
+	.btn {
+		color: #6500ff;
+		background-color: #fff;
+	}
+}
+
+/* BONUS */
+
+.features-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.features-list li {
+	flex-basis: 320px;
+	flex-shrink: 0;
+}
